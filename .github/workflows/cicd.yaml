@@ -89,9 +89,11 @@ jobs:
       run: |
         git config --global user.email "kl.jagadish@gmail.com"
         git config --global user.name "Jagadish K L"
+        git fetch origin main
+        git merge origin/main
         git add helm/go-web-app-chart/values.yaml
         git commit -m "Update tag in Helm chart"
-        git pull
+        git pull origin main
         git push
 
 
